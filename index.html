@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ed McVeigh — Designer &amp; Artist</title>
+<style>
+  :root {
+    --bg: #292625;
+    --bg-soft: #322e2c;
+    --orange: #e8720f;
+    --orange-dark: #c85f0a;
+    --cream: #f3e6cf;
+    --ink: #201c1a;
+    --paper: #f6f1e9;
+    --paper-dim: #c9beae;
+    --line: #1b1816;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: 'Source Sans Pro', 'Segoe UI', -apple-system, sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px 40px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* Header */
+  .logo {
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 3px solid var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--ink);
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    margin: 0 0 6px;
+    color: var(--paper);
+    letter-spacing: 0.3px;
+  }
+
+  .role {
+    text-align: center;
+    color: var(--orange);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+
+  .tagline {
+    text-align: center;
+    color: var(--paper-dim);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 320px;
+    margin: 0 auto 34px;
+  }
+
+  /* Link buttons */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--orange);
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 16px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.12s ease;
+  }
+
+  .link-card:hover { transform: translateY(-2px); }
+  .link-card:active { transform: translateY(0); }
+
+  .link-card.alt {
+    background: var(--cream);
+  }
+
+  .link-text .title {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 3px;
+    color: var(--ink);
+  }
+
+  .link-text .desc {
+    font-size: 12.5px;
+    color: #3a2f26;
+    opacity: 0.75;
+  }
+
+  .link-text .desc .dot {
+    margin: 0 5px;
+  }
+
+  .link-text .desc .tag {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  .arrow {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+  }
+
+  .arrow svg { width: 16px; height: 16px; }
+
+  footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: #7d766c;
+    padding-top: 6px;
+    border-top: 1px solid #3a3532;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link-card { transition: none; }
+  }
+
+  a:focus-visible, .link-card:focus-visible {
+    outline: 2px solid var(--paper);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="logo">EM</div>
+
+  <h1>Ed McVeigh</h1>
+  <p class="role">Designer &amp; Artist</p>
+  <p class="tagline">Crafting custom branding, websites, and one-of-a-kind art from Philadelphia, PA.</p>
+
+  <div class="links">
+
+    <a class="link-card" href="https://www.etsy.com" target="_blank" rel="noopener">
+      <div class="link-text">
+        <p class="title">Art for Purchase</p>
+        <p class="desc">Buy original art and prints <span class="dot">&middot;</span><span class="tag">ETSY</span></p>
+      </div>
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </div>
+    </a>
+
+    <a class="link-card" href="https://www.etsy.com" target="_blank" rel="noopener">
+      <div class="link-text">
+        <p class="title">Stickers for Purchase</p>
+        <p class="desc">Die-cut outdoor vinyl stickers <span class="dot">&middot;</span><span class="tag">ETSY</span></p>
+      </div>
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </div>
+    </a>
+
+    <a class="link-card" href="https://www.etsy.com" target="_blank" rel="noopener">
+      <div class="link-text">
+        <p class="title">House Portraits</p>
+        <p class="desc">Commission a custom watercolor <span class="dot">&middot;</span><span class="tag">ETSY</span></p>
+      </div>
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </div>
+    </a>
+
+    <a class="link-card alt" href="https://www.faire.com" target="_blank" rel="noopener">
+      <div class="link-text">
+        <p class="title">Wholesale Stickers</p>
+        <p class="desc">Stock your retail storefront <span class="dot">&middot;</span><span class="tag">FAIRE</span></p>
+      </div>
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </div>
+    </a>
+
+    <a class="link-card" href="https://design.edmcveigh.com" target="_blank" rel="noopener">
+      <div class="link-text">
+        <p class="title">Design Services</p>
+        <p class="desc">Branding, websites, and illustration</p>
+      </div>
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>&copy; 2025 Ed McVeigh Art. All rights reserved.</footer>
+
+</main>
+</body>
+</html>
