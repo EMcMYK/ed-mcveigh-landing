@@ -60,14 +60,20 @@
     display: inline-block;
     background: var(--orange);
     color: var(--ink);
-    border: none;
-    border-radius: 6px;
+    border: 2px solid var(--ink);
     padding: 12px 26px;
     font-weight: 700;
     font-size: 14px;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: -6px 6px 0 0 var(--cream);
+    transition: transform 0.25s ease, box-shadow 0.5s ease, background-color 0.5s ease;
   }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--cream);
+    box-shadow: -6px 6px 0 0 var(--orange); }
 
   /* Title block */
   .title-block { padding: 10px 32px 30px; max-width: 1100px; margin: 0 auto; }
@@ -90,7 +96,6 @@
   .info-card {
     background: var(--panel);
     border: 2px solid var(--orange);
-    border-radius: 8px;
     padding: 22px 26px;
   }
 
@@ -118,11 +123,15 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    background: var(--panel);
+    background: gray;
     border-radius: 6px;
     padding: 12px 16px;
     font-size: 13px;
     line-height: 1.4;
+  }
+
+  .tool-row.alt {
+    background-color: #3a3734;
   }
 
   .tool-row b { font-weight: 700; }
@@ -131,7 +140,7 @@
     flex: none;
     width: 40px;
     height: 40px;
-    border-radius: 8px;
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,7 +270,7 @@
         </div>
         <div><b>Figma:</b> Website design and brand guide layout</div>
       </div>
-      <div class="tool-row">
+      <div class="tool-row alt">
         <div class="tool-icon ai">Ai</div>
         <div><b>Adobe Illustrator:</b> Logo and character design</div>
       </div>
@@ -304,7 +313,6 @@
     <div class="footer-social">
       <a href="#" class="ph">FB</a>
       <a href="#" class="ph">IG</a>
-      <a href="#" class="ph">IN</a>
     </div>
   </div>
   <p class="footer-bottom">© 2025 Ed McVeigh · Terms · Privacy · Cookies</p>
