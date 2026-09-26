@@ -75,18 +75,31 @@
     display: inline-block;
     background: var(--orange);
     color: var(--ink);
-    border: none;
-    border-radius: 6px;
+    border: 2px solid var(--ink);
     padding: 12px 26px;
     font-weight: 700;
     font-size: 14px;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: -6px 6px 0 0 var(--cream);
+    transition: transform 0.25s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--cream);
+    box-shadow: -6px 6px 0 0 var(--orange);
   }
   .btn.outline {
     background: transparent;
     border: 2px solid var(--paper);
     color: var(--paper);
+  }
+
+  .btn.outline:hover {
+    background-color: var(--cream);
+    border: 2px solid var(--ink);
+    color: var(--ink);
   }
 
   /* Hero */
