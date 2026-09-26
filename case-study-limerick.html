@@ -168,10 +168,23 @@
 
   .shot { border: 2px solid var(--line); border-radius: 4px; overflow: hidden; }
   .shot .ph { min-height: 100%; }
-
-  .shot.sq { aspect-ratio: 1/1; }
+  .shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  .shot video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .shot.sq { aspect-ratio: 4/3; }
   .shot.tall { aspect-ratio: 3/4; }
   .shot.full-tall { align-self: stretch; }
+  .shot.sq-media { aspect-ratio: 1/1; }
 
   .wide-shot {
     padding: 0 32px;
@@ -189,6 +202,7 @@
     margin: 0 auto 60px;
   }
   .usage-row .shot { aspect-ratio: 3/4; }
+  .usage-row .shot.sq-media { aspect-ratio: 1/1; }
 
   /* Footer */
   footer {
@@ -285,11 +299,11 @@
 
 <div class="shots">
   <div class="shots-left">
-    <div class="shot sq"><div class="ph">Logo Lockup</div></div>
-    <div class="shot sq"><div class="ph">Colors &amp; Palette</div></div>
-    <div class="shot sq"><div class="ph">Typography</div></div>
+    <div class="shot sq"><img src="img/Guidelines - Logo.png"/></div>
+    <div class="shot sq"><img src="img/Guidelines - Colors.png"/></div>
+    <div class="shot sq"><img src="img/Guidelines - Typography.png"/></div>
   </div>
-  <div class="shot full-tall"><div class="ph">Full Website Screenshot</div></div>
+  <div class="shot full-tall"><img src="img/limerick-web.png"/></div>
 </div>
 
 <div class="wide-shot">
@@ -297,7 +311,7 @@
 </div>
 
 <div class="usage-row">
-  <div class="shot"><div class="ph">Logo Usage — Dark</div></div>
+  <div class="shot sq-media"><video src="img/logo for animation drop shadow_1920_1080.mp4" autoplay loop muted playsinline></video></div>
   <div class="shot"><div class="ph">Logo Usage — Light / Clear Space</div></div>
 </div>
 
