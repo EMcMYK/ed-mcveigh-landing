@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LimeRick — Case Study</title>
+<style>
+  :root {
+    --bg: #4a4744;
+    --bg-dark: #3a3734;
+    --orange: #e8720f;
+    --cream: #f3e6cf;
+    --ink: #201c1a;
+    --paper: #f6f1e9;
+    --paper-dim: #c9beae;
+    --line: #1b1816;
+    --panel: #55524e;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: 'Source Sans Pro', 'Segoe UI', -apple-system, sans-serif;
+  }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  a { color: inherit; }
+
+  .ph {
+    background: var(--paper);
+    border: 2px solid var(--line);
+    color: #8a8378;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .logo-mark { font-family: Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1; }
+  .logo-mark .sub { color: var(--orange); font-size: 12px; letter-spacing: 2px; display: block; }
+
+  .btn {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--ink);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 26px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Title block */
+  .title-block { padding: 10px 32px 30px; max-width: 1100px; margin: 0 auto; }
+  h1.proj-title { font-family: Georgia, serif; font-size: 42px; margin: 0 0 4px; }
+  .proj-sub { font-size: 14px; color: var(--paper-dim); margin: 0 0 2px; }
+  .proj-tags { font-size: 13px; font-weight: 700; color: var(--paper-dim); margin: 0 0 20px; }
+  .proj-intro { font-size: 14px; line-height: 1.6; max-width: 720px; color: var(--paper-dim); }
+
+  /* Info row */
+  .info-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    padding: 0 32px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+
+  .info-card {
+    background: var(--panel);
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    padding: 22px 26px;
+  }
+
+  .info-card h3 {
+    color: var(--orange);
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+  .info-card p {
+    font-size: 13px;
+    color: var(--paper-dim);
+    margin: 0 0 16px;
+    line-height: 1.5;
+  }
+  .info-card h3:last-of-type,
+  .info-card p:last-child { margin-bottom: 0; }
+
+  .tool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--panel);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .tool-row b { font-weight: 700; }
+
+  .tool-icon {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+  }
+  .tool-icon.figma { background: #fff; padding: 4px; }
+  .tool-icon.ai { background: #330000; color: #ff9a00; }
+  .tool-icon.ae { background: #00005b; color: #d291ff; }
+
+  .info-card .btn { display: block; text-align: center; margin-top: 16px; }
+
+  /* Image grid */
+  .shots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 0 32px;
+    max-width: 1100px;
+    margin: 0 auto 18px;
+  }
+
+  .shots-left { display: flex; flex-direction: column; gap: 18px; }
+
+  .shot { border: 2px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .shot .ph { min-height: 100%; }
+
+  .shot.sq { aspect-ratio: 1/1; }
+  .shot.tall { aspect-ratio: 3/4; }
+  .shot.full-tall { align-self: stretch; }
+
+  .wide-shot {
+    padding: 0 32px;
+    max-width: 1100px;
+    margin: 0 auto 18px;
+  }
+  .wide-shot .shot { aspect-ratio: 16/9; }
+
+  .usage-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 0 32px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+  }
+  .usage-row .shot { aspect-ratio: 3/4; }
+
+  /* Footer */
+  footer {
+    background: var(--bg-dark);
+    padding: 40px 32px 24px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-nav { display: flex; gap: 26px; font-size: 13px; }
+  .footer-nav a { text-decoration: underline; color: var(--orange); }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social .ph {
+    width: 34px; height: 34px; border-radius: 50%;
+    font-size: 10px; background: var(--panel); color: var(--paper);
+    border: none;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 11px;
+    color: #8a8378;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #55524e;
+  }
+
+  @media (max-width: 760px) {
+    .info-row { grid-template-columns: 1fr; }
+    .shots { grid-template-columns: 1fr; }
+    h1.proj-title { font-size: 32px; }
+    .usage-row { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">EJM<span class="sub">ART</span></div>
+  <a href="#" class="btn">Say hello!</a>
+</header>
+
+<div class="title-block">
+  <h1 class="proj-title">LimeRick</h1>
+  <p class="proj-sub">Conceptual Branding Project</p>
+  <p class="proj-tags">Brand Design, Web Design, Logo Design, Character Illustration</p>
+  <p class="proj-intro">This project is a concept for a music app that combines a vibrant brand identity with an engaging user experience. I designed the website, created the logo, typography, and color palette, illustrated a mascot character, and animated the logo to bring the brand to life.</p>
+</div>
+
+<div class="info-row">
+  <div class="info-card">
+    <h3>Brand Design</h3>
+    <p>Developed the logo, selected colors and typography, and created a cohesive brand guide</p>
+    <h3>Website Design</h3>
+    <p>Designed the web interface with a clean, user-friendly layout in Figma</p>
+    <h3>Character Design</h3>
+    <p>Illustrated a fun mascot to give the brand personality and charm</p>
+    <h3>Logo Animation</h3>
+    <p>Used After Effects to animate the logo for a dynamic, modern touch</p>
+  </div>
+
+  <div class="info-card">
+    <div class="tool-list">
+      <div class="tool-row">
+        <div class="tool-icon figma">
+          <svg width="20" height="20" viewBox="0 0 38 57" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1abcfe"/>
+            <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="#0acf83"/>
+            <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="#a259ff"/>
+            <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#f24e1e"/>
+            <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#ff7262"/>
+          </svg>
+        </div>
+        <div><b>Figma:</b> Website design and brand guide layout</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon ai">Ai</div>
+        <div><b>Adobe Illustrator:</b> Logo and character design</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon ae">Ae</div>
+        <div><b>Adobe After Effects:</b> Logo animation</div>
+      </div>
+    </div>
+    <a href="#" class="btn">Contact Me To Design Your Brand!</a>
+  </div>
+</div>
+
+<div class="shots">
+  <div class="shots-left">
+    <div class="shot sq"><div class="ph">Logo Lockup</div></div>
+    <div class="shot sq"><div class="ph">Colors &amp; Palette</div></div>
+    <div class="shot sq"><div class="ph">Typography</div></div>
+  </div>
+  <div class="shot full-tall"><div class="ph">Full Website Screenshot</div></div>
+</div>
+
+<div class="wide-shot">
+  <div class="shot"><div class="ph">Mascot Character Illustration</div></div>
+</div>
+
+<div class="usage-row">
+  <div class="shot"><div class="ph">Logo Usage — Dark</div></div>
+  <div class="shot"><div class="ph">Logo Usage — Light / Clear Space</div></div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="logo-mark">EJM<span class="sub">ART</span></div>
+    <div class="footer-nav">
+      <a href="#">My Work</a>
+      <a href="#">My Art</a>
+      <a href="#">Me</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" class="ph">FB</a>
+      <a href="#" class="ph">IG</a>
+      <a href="#" class="ph">IN</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 Ed McVeigh · Terms · Privacy · Cookies</p>
+</footer>
+
+</body>
+</html>
