@@ -116,7 +116,7 @@
   .tool-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
   }
 
   .tool-row {
@@ -124,8 +124,8 @@
     align-items: center;
     gap: 14px;
     background: gray;
-    border-radius: 6px;
-    padding: 12px 16px;
+    border-radius: 2px;
+    padding: 24px 32px;
     font-size: 13px;
     line-height: 1.4;
   }
@@ -152,7 +152,12 @@
   .tool-icon.ai { background: #330000; color: #ff9a00; }
   .tool-icon.ae { background: #00005b; color: #d291ff; }
 
-  .info-card .btn { display: block; text-align: center; margin-top: 16px; }
+  .info-card .btn {
+  display: block;
+  width: 60%;
+  margin: 16px auto 0;
+  text-align: center;
+}
 
   /* Image grid */
   .shots {
@@ -299,9 +304,11 @@
 
 <div class="shots">
   <div class="shots-left">
+    <div class="shot sq-media"><video src="img/logo for animation drop shadow_1920_1080.mp4" autoplay loop muted playsinline></video></div>
     <div class="shot sq"><img src="img/Guidelines - Logo.png"/></div>
     <div class="shot sq"><img src="img/Guidelines - Colors.png"/></div>
     <div class="shot sq"><img src="img/Guidelines - Typography.png"/></div>
+    <div class="shot sq-media"><img src="img/lime-rick.png"/></div>
   </div>
   <div class="shot full-tall"><img src="img/limerick-web.png"/></div>
 </div>
@@ -310,10 +317,10 @@
   <!-- <div class="shot"><img src="img/lime-rick.png"/></div> -->
 </div>
 
-<div class="usage-row">
+<!-- <div class="usage-row">
   <div class="shot sq-media"><video src="img/logo for animation drop shadow_1920_1080.mp4" autoplay loop muted playsinline></video></div>
   <div class="shot sq-media"><img src="img/lime-rick.png"/></div>
-</div>
+</div> --> 
 
 <footer>
   <div class="footer-inner">
